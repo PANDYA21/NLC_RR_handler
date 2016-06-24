@@ -1,11 +1,11 @@
 require('Rook')
-library(rjson)
+load_or_install("rjson")
 classifier <<- "2374f9x69-nlc-6914" # the nlc id
 source("udfs.R")
 source("udfs_watson.R")
 source("udfsB.R")
 
-rook$stop()
+# rook$stop()
 rook = Rhttpd$new()
 rook$add(
   name ="summarize",

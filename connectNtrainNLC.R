@@ -117,6 +117,7 @@ cat(watson.nlc.checkclassifierstatus(status))
 ##################################################################
 ##### ACTION: LET'S GO!  SUBMIT TEXT AND CLASSIFY, RETURN CLASS / %
 # classifier = "2373f5x67-nlc-3778" # "2374f9x68-nlc-1308" # "2373f5x67-nlc-1380" # "950DCB-nlc-###" 
+classifier <- status
 
 query = "I am 89"
 watson.nlc.processtextreturnclass(classifier,query)
