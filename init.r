@@ -19,10 +19,16 @@ load_or_install <- function(func = "", ...){
 ###
 
 ## Load libs
-load_or_install("RCurl", repos='http://cran.rstudio.com/') 
+load_or_install("RCurl", repos='http://cran.rstudio.com/')
 load_or_install("reshape2", repos='http://cran.rstudio.com/')
 load_or_install("stringr", repos='http://cran.rstudio.com/')
-load_or_install("splitstackshape", repos='http://cran.rstudio.com/')
 load_or_install("rjson", repos='http://cran.rstudio.com/')
+load_or_install("httr", repos='http://cran.rstudio.com/')
+load_or_install("XML", repos='http://cran.rstudio.com/')
+# load_or_install("data.table", repos='http://cran.rstudio.com/')
+# load_or_install("tidyr", repos='http://cran.rstudio.com/')
+# load_or_install("dplyr", repos='http://cran.rstudio.com/')
+# load_or_install("stringr", repos='http://cran.rstudio.com/')
+# load_or_install("splitstackshape", repos='http://cran.rstudio.com/')
 
 print("All packages installed...")
