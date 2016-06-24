@@ -19,10 +19,15 @@ options(RCurlOptions = list(cainfo = system.file("CurlSSL", "cacert.pem", packag
 
 
 ######### Housekeeping And Authentication 
-# setwd("/Users/ryan/Documents/Project Daisy")
+######### Housekeeping And Authentication 
 base_url = "https://gateway.watsonplatform.net/natural-language-classifier/api/v1/classifiers/"
-username = "1f8006fe-d57a-4201-93b6-0563b1573a67" # "abc123-####-####-YOUR-CREDS-HERE" #### BE VERY CAREFUL TO understand "Instantiating Credentials" from bound service vs "Service Credentials"
-password = "EhscvrMhWnzg" # "123456789ABC"  # you need your own ## if you are having authentication issues , may need the other creds.
+# username = "1f8006fe-d57a-4201-93b6-0563b1573a67" # "abc123-####-####-YOUR-CREDS-HERE" #### BE VERY CAREFUL TO understand "Instantiating Credentials" from bound service vs "Service Credentials"
+# password = "EhscvrMhWnzg" # "123456789ABC"  # you need your own ## if you are having authentication issues , may need the other creds.
+# username_password = paste(username,":",password)
+# 
+# base_url <- "https://gateway.watsonplatform.net/natural-language-classifier/api"
+password <- "byIZc0TJS1Bq"
+username <- "8166a940-90d3-4f88-8a93-b76e20aa7152"
 username_password = paste(username,":",password)
 
 ## Next - let's create all the functions (but not actually execute them just yet)

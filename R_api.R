@@ -1,11 +1,12 @@
 require('Rook')
-load_or_install("rjson")
+require("rjson")
 classifier <<- "2374f9x69-nlc-6914" # the nlc id
+setwd("~/GitHub/NLC_RR_handler/")
 source("udfs.R")
 source("udfs_watson.R")
 source("udfsB.R")
 
-# rook$stop()
+rook$stop()
 rook = Rhttpd$new()
 rook$add(
   name ="summarize",
@@ -14,8 +15,9 @@ rook$add(
     res <- Response$new()
     if(req$post()){
       post <- req$POST() # the input from user
-      # print(post)
+      print(names(post))
       post.ans <- watson.nlc.processtextreturnclass(classifier, as.character(names(post)))
+      print(post.ans)
       res$write(toJSON(post.ans)) # response for the POST 
     }
     if(req$get()){
@@ -33,7 +35,7 @@ ress <- POST("http://127.0.0.1:1234/custom/summarize",encode = "multipart", body
 ress
 cat(content(ress, "text"))
 ## post with string
-ress <- POST("http://127.0.0.1:1234/custom/summarize", encode = "multipart", body = "I play tennis often", content_type("text"))
+ress <- POST("http://127.0.0.1:1234/custom/summarize", encode = "multipart", body = "I am 26", content_type("text"))
 ress
 cat(content(ress, "text"))
 ## get
