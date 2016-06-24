@@ -136,10 +136,10 @@ readLines("22272.chat")
 ress <- POST("http://10.0.50.252:1234/custom/summarize", encode = "multipart", 
              body = '{"user_pass":"nlc_rr_handler:hackathon@2016", 
              "query":"i play ", 
-             "conv_id":"20749"}', content_type("text"))
+             "conv_id":"NULL"}', content_type("text"))
 ress
 fromJSON(content(ress, "text"))
-readLines("20749.chat")
+# readLines("20749.chat")
 
 
 ## invalid question
@@ -148,13 +148,16 @@ ress <- POST("http://nlc-rr-handler.eu-gb.mybluemix.net/custom/summarize", encod
              "query":"i play ", 
              "conv_id":"NULL"}', content_type("text"))
 ress
+ress$all_headers
 fromJSON(content(ress, "text"))
 
 
 # actual JSON passing
 ## invalid question
-ress <- POST("http://nlc-rr-handler.eu-gb.mybluemix.net/custom/summarize", encode = "multipart", 
+ressb <- POST("http://nlc-rr-handler.eu-gb.mybluemix.net/custom/summarize", encode = "multipart", 
              body = toJSON(list(user_pass="nlc_rr_handler:hackathon@2016", query="I am male", conv_id="NULL")), 
-             content_type("json"))
-ress
-fromJSON(content(ress, "text"))
+             content_type("Application/json"))
+ressb$headers
+ressb$all_headers
+ressb$request
+

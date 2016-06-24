@@ -22,7 +22,10 @@ user_pass.api <- paste0(uname.api, ":", pswd.api, collapse = "")
 
 rookApp <- function(env) {
   req <- Request$new(env)
-  res <- Response$new(headers=list("Content-Type"="application/json" , "Access-Control-Allow-Origin"="*"))
+  # res <- Response$new(headers=list("Content-Type"="application/json" , 
+  #                                  "Access-Control-Allow-Origin"="*", # "http://nlc-rr-handler.eu-gb.mybluemix.net/", #"*",
+  #                                  "access-control-allow-credentials"="TRUE"))
+  res <- Response$new()
   if(req$post()){
     
     post <- req$POST() # the input from user
