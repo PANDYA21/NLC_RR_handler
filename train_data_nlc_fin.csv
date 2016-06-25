@@ -1,0 +1,307 @@
+I am a girl,user_gender
+I am girl,user_gender
+girl,user_gender
+I am a boy,user_gender
+I am boy,user_gender
+boy,user_gender
+I am a man,user_gender
+man,user_gender
+I am a male,user_gender
+male,user_gender
+I am a woman,user_gender
+woman,user_gender
+I am a woman,user_gender
+woman,user_gender
+I am a female,user_gender
+female,user_gender
+I am 26 years old,user_age
+I am 26,user_age
+I am 26,user_age
+26,user_age
+36,user_age
+I am 89,user_age
+45,user_age
+89,user_age
+56,user_age
+75,user_age
+I am 12,user_age
+26,user_age
+42,user_age
+57,user_age
+86,user_age
+32,user_age
+34,user_age
+* cheap * ,20_10
+I want cheap *,30_20
+I am looking cheap *,20_30_40
+I need cheap *,20_30_40_50
+I dont want too costly,20_30_40_50
+* dont * costly *,20
+* dont * expensive *,20
+* no * expensive *,20
+* no* costly *,20
+* less than 40 *,40
+* 40 dollar *,40
+* 40 usd *,40
+* USD 40 *,40
+* below 40 *,20_30
+* under 40 *,20_30
+* below 10*,10
+* below 10*,10
+* below 20*,10
+* below 30*,20_10
+* below 35*,10_20_30
+* about 10 *,10_20
+* about 20 *,10_20_30
+* about 30 *,20_30_40
+* about 40 *,30_40_50
+* about 36 *,20_30_40
+* medium * ,50_60_70_80_90_100
+* less than 100 *,10_20_30_40_50_60_70_80_90
+* 100 dollar *,80_90_100_110
+* 100 usd *,80_90_100_110
+* USD 100 *,100
+* below 100 *,100
+* under 100 *,10_20_30_40_50_60_70_80_90
+* below 90*,10_20_30_40_50_60_70_80
+* below 80*,10_20_30_40_50_60_70
+* below 70*,10_20_30_40_50_60
+* below 60*,10_20_30_40_50
+* below 55*,10_20_30_40
+* about 50 *,40_50_60
+* about 45 *,30_40_50_60
+* costly * ,500
+I want costly *,500
+I am looking cheap *,20_30_40
+I need cheap *,20_30_40_50_60_70
+I dont want costly,300_400_500_600_700_800_1500
+* costly *,300_400_500_600_700_800_1500
+* expensive *,300_400_500_600_700_800_1500
+* not * cheap *,300_400_500_600_700_800_1500
+* no * cheap *,300_400_500_600_700_800_1500
+* 200 usd *,200
+* USD 300 *,300
+* above 100 *,100
+* higher * 100 *,200_300_400_500
+I want shoes,shoes_sneaker_boots_sandle
+I am looking for shoes,shoes_sneaker_boots_sandle
+I want * shoes,shoes_sneaker_boots_sandle
+I am in search of shoes,shoes_sneaker_boots_sandle
+I need shoes,shoes_sneaker_boots_sandle
+* shoes *,shoes_sneaker_boots_sandle
+shoes,shoes_sneaker_boots_sandle
+boots,boots
+sandle,sandle
+what * shoes do you have?,shoes_sneaker_boots_sandle
+What types of shoes *,shoes_sneaker_boots_sandle
+what sort of shoes do you have?,shoe_sneaker_boots_sandle
+what * shoes *,shoe_sneaker_boots_sandle
+I want pants,pants_jeans_trousers
+* pants *,pants_jeans_trousers
+* trousers *,pants_jeans_trousers
+* jeans *,pants_jeans_trousers
+I am looking for jeans,pants_jeans_trousers
+* looking * pants *,pants_jeans_trousers
+* looking * trousers *,pants_jeans_trousers
+* looking * jeans *,pants_jeans_trousers
+* want * pants *,pants_jeans_trousers
+* want * trousers *,pants_jeans_trousers
+* want * jeans *,pants_jeans_trousers
+* need * pants *,pants_jeans_trousers
+* need * trousers *,pants_jeans_trousers
+* need * jeans *,pants_jeans_trousers
+* skirts *,skirts_mini
+* skirt *,skirts_mini
+I am looking for skirts,skirts_mini
+I need skirts,skirts_mini
+What sort of skirts do you have?,skirts_mini
+what * skirts *,skirts_mini
+classic,timeless
+retro,timeless
+fine,timeless
+timeless,timeless
+everlasting,timeless
+wool,soft_smooth_wool_fleece
+fleece,soft_smooth_wool_fleece
+soft,soft_smooth_wool_fleece
+smooth,soft_smooth_wool_fleece
+party,evening_outgoing_mini_elegant_fashionable_salsa_cocktail
+fun,evening_outgoing_mini_elegant_fashionable_salsa_cocktail
+evening,evening_outgoing_mini_elegant_fashionable_salsa_cocktail
+club,evening_outgoing_mini_elegant_fashionable_salsa_cocktail
+nightlife,evening_outgoing_mini_elegant_fashionable_salsa_cocktail
+easy,comfortable
+cozy,comfortable
+relaxed,comfortable
+snug,comfortable
+modern,shiny_modern_short_elegant
+shiny,shiny_modern_short_elegant
+short,shiny_modern_short_elegant
+elegant,shiny_modern_short_elegant
+tastefull,shiny_modern_short_elegant
+designer,designer
+brand,designer
+special,designer
+sripped,stripped
+light,Ultra-thin
+delicate,Ultra-thin
+thin,Ultra-thin
+average,traditional
+conventional,traditional
+conservative,traditional
+english,british
+british,british
+slim,slim_skinny
+skinny,slim_skinny
+V-Neck,casual_shiny_modern_short_summer_denim_V-neck
+denim,casual_shiny_modern_short_summer_denim_V-neck
+casual,casual_shiny_modern_short_summer_denim_V-neck
+shiny,casual_shiny_modern_short_summer_denim_V-neck
+modern,casual_shiny_modern_short_summer_denim_V-neck
+short,casual_shiny_modern_short_summer_denim_V-neck
+summer,casual_shiny_modern_short_summer_denim_V-neck
+straight,straight
+Straight-leg,straight
+rocked,leather
+rough,leather
+tweed,tweed
+leather,leather
+plastic,synthetic
+synthetic,synthetic
+artificial,synthetic
+cashmere,cashmere
+velour,velour
+fleece,fleece
+silk,silk
+wollen,wolen
+cotton,cotton
+poyester,polyester
+female,women_her_she
+lady,women her she
+gentle,women her she
+male,man his he
+masculin,man his he
+men,man his he
+girl,girl
+teenager,girl
+teen,boy
+boy,boy
+youth,boy
+newborn,baby
+baby,baby
+infant,baby
+blousses,blousses
+dress,dress
+coat,coat
+hoodi,hoodi
+aviator,aviator
+shirt,shirt
+suit,suit
+pullover,pullover
+pants,pants
+skirt,skirt
+boots,boots
+jeans,jeans
+sweater,sweater
+trousers,trousers
+bag,bag
+purse,bag
+assecoires,asseccoires
+tie,tie
+handbag,handbag
+top,top
+sneaker,sneaker
+jacket,jacket
+AURORA,AURORA
+BCL,BCL
+BSH,BSH
+GCL,GCL
+GSH,GSH
+MAC,MAC
+MCL,MCL
+MSH,MSH
+WAC,WAC
+WCL,WCL
+hicking,outdoor
+nature,outdoor
+camping,outdoor
+stonewashed,stonewashed
+vintage,vintage
+white,white
+pale,white
+neutral,white
+pink,pink
+colored,pink
+girly,pink
+black,black
+dark,black
+sand,beige
+beige,beige
+blue,blue
+calm,blue
+fresh,blue
+brown,brown
+gray,gray
+stone,gray
+purple,purple
+mystery,purple
+ocult,purple
+navy,navy
+sailor,navy
+happy,orange
+orange,orange
+silver,silver
+rich,silver
+metal,silver
+citrus,yellow
+cheerful,yellow
+yellow,yellow
+green,green
+wild,green
+verdant,green
+albini,albini
+borsati,borsati
+cassetti,cassetti
+coolers,coolers
+emery,emery
+gusso,gusso
+luigi,luigi
+hermitage,hermitage
+mayflower,mayflower
+synergy,synergy
+versatil,versatil
+baril,baril
+sneaker,sneakers
+turtleneck,cardigan
+sweater,cardigan
+cardigan,cardigan
+doublet,blazer
+blazer,blazer
+heat,fedora
+fedora,fedora
+kidswear,kidswear
+slippers,slippers
+stilettos,stilettos
+velour,velour
+elastane,elastane
+nylon,nylon
+khaki,khaki
+snow,cold_winter
+winter,cold_winter
+cold,cold_winter
+wind,wind
+breathable,breathable
+crocodile,crocodile
+wide,wide
+tight,tight
+indie,indie
+athletic,athletic_running_sportsman
+running,athletic_running_sportsman
+sports,athletic_running_sportsman
+stretch,comfort_strechable_wide_loose
+work,work_office_formal
+office,work_office_formal
+formal,work_office_formal
+fabulous,fabulous
+front_pockets,front_pockets
+stripes,stripes

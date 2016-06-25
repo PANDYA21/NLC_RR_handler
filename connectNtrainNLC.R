@@ -12,7 +12,7 @@ options(RCurlOptions = list(cainfo = system.file("CurlSSL", "cacert.pem", packag
 
 
 ######### Housekeeping And Authentication 
-base_url = "https://gateway.watsonplatform.net/natural-language-classifier/api/v1/classifiers/"
+base_url <- "https://gateway.watsonplatform.net/natural-language-classifier/api/v1/classifiers/"
 # username = "1f8006fe-d57a-4201-93b6-0563b1573a67" # "abc123-####-####-YOUR-CREDS-HERE" #### BE VERY CAREFUL TO understand "Instantiating Credentials" from bound service vs "Service Credentials"
 # password = "EhscvrMhWnzg" # "123456789ABC"  # you need your own ## if you are having authentication issues , may need the other creds.
 # username_password = paste(username,":",password)
@@ -96,9 +96,9 @@ watson.nlc.processtextreturnclass <- function(classifier_id,query_text){
 
 ###### ACTION: Create a new CLassifier!  (200 = Good outcome) - 
 # only first time ==> write.csv2(read.csv("train_data_nlc.csv"), file = "train_data_nlc2.csv", row.names = F)
-write.csv(read.csv2("train_data_nlc2.csv"), file = "train_data_nlc.csv", row.names = F)
-thefile <- "train_data_nlc.csv"
-thename <- "\"hack01\""
+# write.csv(read.csv2("train_data_nlc2.csv"), file = "train_data_nlc.csv", row.names = F)
+thefile <- "train_data_nlc_fin.csv" # "train_data_nlc.csv"
+thename <- "\"hack02\""
 watson.nlc.createnewclassifier(thefile, thename)  # calls function, passes file and name from above, starts the magic. might take 2 to 20+ minutes depending on complexity
 
 
@@ -108,7 +108,7 @@ watson.nlc.listallclassifiers()
 
 
 ###### ACTION: CHECK CLASSIFIER STATUS (pick the one from bottom of list above, that's newest one you just made)
-status <- as.character(watson.nlc.listallclassifiers()$classifier) # 2374f9x69-nlc-6914 
+status <- as.character(watson.nlc.listallclassifiers()$classifier)[2] # 2374f9x69-nlc-6914 
 cat(watson.nlc.checkclassifierstatus(status))
 ## if new will say "not yet ready to accept classify requests" - once done in a few mintues will say
 ## "The classifier instance is now available and is ready to take classifier requests" - then you can submit query below
@@ -122,10 +122,10 @@ classifier <- status
 query = "I am 89"
 watson.nlc.processtextreturnclass(classifier,query)
 
-query = "I am 1"
+query = "skinny"
 watson.nlc.processtextreturnclass(classifier,query)
 
-query = "I want cloths"
+query = "shoes"
 watson.nlc.processtextreturnclass(classifier,query)
 
 

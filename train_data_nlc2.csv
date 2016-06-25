@@ -31,19 +31,6 @@ I am 12;user_age
 86;user_age
 32;user_age
 34;user_age
-I want cloths;query_cloth
-I am looking for cloths;query_cloth
-I want * cloths;query_cloth
-I am in search of cloths;query_cloth
-I need cloths;query_cloth
-cloths;query_cloth
-cloth;query_cloth
-textile;query_cloth
-fabric;query_cloth
-what * cloths do you have?;query_cloth
-What types of cloths *;query_cloth
-what sort of cloths do you have?;query_cloth
-what * cloths *;query_cloth
 * cheap * ;price_low
 I want cheap *;price_low
 I am looking cheap *;price_low
@@ -99,36 +86,36 @@ I dont want too costly;price_high
 * USD 300 *;price_high
 * above 100 *;price_high
 * higher * 100 *;price_high
-I want shoes;query_shoes
-I am looking for shoes;query_shoes
-I want * shoes;query_shoes
-I am in search of shoes;query_shoes
-I need shoes;query_shoes
-* shoes *;query_shoes
-shoes;query_shoes
-boots;query_shoes
-sandle;query_shoes
-what * shoes do you have?;query_shoes
-What types of shoes *;query_shoes
-what sort of shoes do you have?;query_shoes
-what * shoes *;query_shoes
-I want pants;query_pants
-* pants *;query_pants
-* trousers *;query_pants
-* jeans *;query_pants
-I am looking for jeans;query_pants
-* looking * pants *;query_pants
-* looking * trousers *;query_pants
-* looking * jeans *;query_pants
-* want * pants *;query_pants
-* want * trousers *;query_pants
-* want * jeans *;query_pants
-* need * pants *;query_pants
-* need * trousers *;query_pants
-* need * jeans *;query_pants
-* skirts *;query_skirts
-* skirt *;query_skirts
-I am looking for skirts;query_skirts
-I need skirts;query_skirts
-What sort of skirts do you have?;query_skirts
-what * skirts *;query_skirts
+I want shoes;shoes
+I am looking for shoes;shoes
+I want * shoes;shoes
+I am in search of shoes;shoes
+I need shoes;shoes
+* shoes *;shoes
+shoes;shoes
+boots;shoes
+sandle;shoes
+what * shoes do you have?;shoes
+What types of shoes *;shoes
+what sort of shoes do you have?;shoes
+what * shoes *;shoes
+I want pants;pants
+* pants *;pants
+* trousers *;pants
+* jeans *;pants
+I am looking for jeans;pants
+* looking * pants *;pants
+* looking * trousers *;pants
+* looking * jeans *;pants
+* want * pants *;pants
+* want * trousers *;pants
+* want * jeans *;pants
+* need * pants *;pants
+* need * trousers *;pants
+* need * jeans *;pants
+* skirts *;skirts
+* skirt *;skirts
+I am looking for skirts;skirts
+I need skirts;skirts
+What sort of skirts do you have?;skirts
+what * skirts *;skirts

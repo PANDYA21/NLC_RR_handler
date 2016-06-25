@@ -1,6 +1,6 @@
 library(Rook)
 require("rjson")
-classifier <<- "2374f9x69-nlc-6914" # the nlc id
+classifier <<- "2374f9x68-nlc-7215"# "2374f9x69-nlc-6914" # the nlc id
 setwd("~/GitHub/NLC_RR_handler/")
 source("rookApp.R")
 source("udfs.R")

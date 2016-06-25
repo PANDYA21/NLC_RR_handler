@@ -54,7 +54,11 @@ rookApp <- function(env) {
         class.ans <- nlc.res$class[nlc.res$confidence > 0.75]
         # if NLC couldnt understand...
         if(length(class.ans) == 0){
-          didnotget.txt <- "Could not understand that... "
+          didnotget.txt <- sample(c("Could not understand that... ", 
+                                    "Did not get that... ",
+                                    "I did not understand that... ",
+                                    "I am afraid I did not understand... ",
+                                    "I am sorry that i could not understand... "), 1)
         } else {
           didnotget.txt <- character(0)
         }
@@ -79,7 +83,7 @@ rookApp <- function(env) {
           chatt <- readLines(con = paste0(post$conv_id, ".chat"))
         } else {
           
-          # user history not found
+          # user history not found, create a new file
           chatt <- character(0)
         }
         
@@ -92,7 +96,11 @@ rookApp <- function(env) {
         class.ans <- nlc.res$class[nlc.res$confidence > 0.75]
         # if NLC couldnt understand...
         if(length(class.ans) == 0){
-          didnotget.txt <- "Could not understand that... "
+          didnotget.txt <- sample(c("Could not understand that... ", 
+                                    "Did not get that... ",
+                                    "I did not understand that... ",
+                                    "I am afraid I did not understand... ",
+                                    "I am sorry that i could not understand... "), 1)
         } else {
           didnotget.txt <- character(0)
         }
@@ -104,16 +112,20 @@ rookApp <- function(env) {
         # # look for existing data and send next question
         post.ans$next_question <- paste0(didnotget.txt, getNextQue(chatt))
         
-        # send request to rr (send after three accepted answers)
+        ## send request to rr (send after three accepted answers)
         asked <- unlist(lapply(strsplit(chatt, ":"), function(x) x[2]))
+        # accept the answers that NLC was able to classify
         answers <- chatt[!is.na(asked)]
+        asked <- asked[!is.na(asked)]
         answers <- unlist(lapply(strsplit(answers, ":"), function(x) x[1]))
-        
         if(length(answers) >= 3){
-          query_to_rr <- paste(answers, collapse = "_")
-          # query_to_rr <- gsub("\ ", "%20", query_to_rr) # the proper solution after 'shortDescription' is solved
-          query_to_rr <- gsub("\ ", ".", query_to_rr)
+          query_to_rr <- paste(getKeywords(answers, asked), collapse = "%20")
+          # query_to_rr <- paste(answers, collapse = "%20")
+          query_to_rr <- gsub("\ ", "%20", query_to_rr) # the proper solution after 'shortDescription' is solved
+          # query_to_rr <- gsub("\ ", "_", query_to_rr)
           post.ans$rr_data <- getRRresp(query_to_rr)
+        } else {
+          post.ans$rr_data <- "NULL"
         }
       }
     } else {

@@ -13,7 +13,7 @@ load_or_install("tidyr", repos='http://cran.rstudio.com/')
 load_or_install("dplyr", repos='http://cran.rstudio.com/')
 load_or_install("stringr", repos='http://cran.rstudio.com/')
 load_or_install("splitstackshape", repos='http://cran.rstudio.com/')
-classifier <<- "2374f9x69-nlc-6914" # the nlc id
+classifier <<- "2374f9x68-nlc-7215" # "2374f9x69-nlc-6914" # the nlc id
 on.exit(setwd(oldwd))
 
 # # run the app
@@ -69,4 +69,4 @@ if (Sys.getenv('VCAP_APP_PORT') == "") {
     # running.
     # while (TRUE) Sys.sleep(24 * 60 * 60)
   }
-}
+} 

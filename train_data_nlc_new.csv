@@ -1,0 +1,161 @@
+I am a girl;user_gender;;
+I am girl;user_gender;;evening
+girl;user_gender;;shiny
+I am a boy;user_gender;;modern
+I am boy;user_gender;;designer
+boy;user_gender;;stripped
+I am a man;user_gender;;Ultra-thin
+man;user_gender;;traditional
+I am a male;user_gender;;british
+male;user_gender;;slim
+I am a woman;user_gender;;striped
+woman;user_gender;;casual
+I am a woman;user_gender;;mini
+woman;user_gender;;short
+I am a female;user_gender;;zippered
+female;user_gender;;elegant
+I am 26 years old;user_age;;fashionable
+I am 26;user_age;;skinny
+I am 26;user_age;;summer
+26;user_age;;slim
+36;user_age;;denim
+I am 89;user_age;;sun
+45;user_age;;straight
+89;user_age;;comfortable
+56;user_age;;turtle
+75;user_age;;V-neck
+I am 12;user_age;;outgoing
+26;user_age;;salsa
+42;user_age;;soft
+57;user_age;;smooth
+86;user_age;;outdoor
+32;user_age;;stonewashed
+34;user_age;;white
+I want cloths;query_cloth;;pink
+I am looking for cloths;query_cloth;;black
+I want * cloths;query_cloth;;beige
+I am in search of cloths;query_cloth;;blue
+I need cloths;query_cloth;;brown
+cloths;query_cloth;;gray
+cloth;query_cloth;;purple
+textile;query_cloth;;navy
+fabric;query_cloth;;orange
+what * cloths do you have?;query_cloth;;silver
+What types of cloths *;query_cloth;;gray
+what sort of cloths do you have?;query_cloth;;yellow
+what * cloths *;query_cloth;;green
+* cheap * ;price_low;;albini
+I want cheap *;price_low;;borsati
+I am looking cheap *;price_low;;cassetti
+I need cheap *;price_low;;coolers
+I dont want too costly;price_low;;emery
+* dont * costly *;price_low;;gusso
+* dont * expensive *;price_low;;luigi
+* no * expensive *;price_low;;hermitage
+* no* costly *;price_low;;mayflower
+* less than 40 *;price_low;;synergy
+* 40 dollar *;price_low;;versatil
+* 40 usd *;price_low;;baril
+* USD 40 *;price_low;;40
+* below 40 *;price_low;;100
+* under 40 *;price_low;;500
+* below 10*;price_low;;tweed
+* below 10*;price_low;;wool
+* below 20*;price_low;;leather
+* below 30*;price_low;;synthetic
+* below 35*;price_low;;cashmere
+* about 10 *;price_low;;velour
+* about 20 *;price_low;;fleece
+* about 30 *;price_low;;silk
+* about 40 *;price_low;;wolen
+* about 36 *;price_low;;cotton
+* medium * ;price_medium;;polyester
+* medium range *;price_medium;;women
+I am looking cheap to medium *;price_medium;;man
+* cheap * medium *;price_medium;;girl
+* less than 100 *;price_medium;;boy
+* 100 dollar *;price_medium;;baby
+* 100 usd *;price_medium;;blousses
+* USD 100 *;price_medium;;dress
+* below 100 *;price_medium;;coat
+* under 100 *;price_medium;;hoodi
+* below 90*;price_medium;;aviator
+* below 80*;price_medium;;shirt
+* below 70*;price_medium;;suit
+* below 60*;price_medium;;pullover
+* below 55*;price_medium;;pants
+* about 50 *;price_medium;;skirt
+* about 45 *;price_medium;;boots
+* costly * ;price_high;;jeans
+I want costly *;price_high;;sweater
+I am looking cheap *;price_high;;trousers
+I need cheap *;price_high;;bag
+I dont want too costly;price_high;;asseccoires
+* costly *;price_high;;tie
+* expensive *;price_high;;handbag
+* not * cheap *;price_high;;top
+* no * cheap *;price_high;;sneaker
+* 200 usd *;price_high;;jacket
+* USD 300 *;price_high;;AURORA
+* above 100 *;price_high;;BCL
+* higher * 100 *;price_high;;BSH
+I want shoes;query_shoes;;GCL
+I am looking for shoes;query_shoes;;GSH
+I want * shoes;query_shoes;;MAC
+I am in search of shoes;query_shoes;;MCL
+I need shoes;query_shoes;;MSH
+* shoes *;query_shoes;;WAC
+shoes;query_shoes;;WCL
+boots;query_shoes;;sundress
+sandle;query_shoes;;cocktail
+what * shoes do you have?;query_shoes;;crocodile
+What types of shoes *;query_shoes;;wide
+what sort of shoes do you have?;query_shoes;;tight
+what * shoes *;query_shoes;;slimfit
+I want pants;query_pants;;relaxed
+* pants *;query_pants;;indie
+* trousers *;query_pants;;skinny
+* jeans *;query_pants;;athletic
+I am looking for jeans;query_pants;;running
+* looking * pants *;query_pants;;wide
+* looking * trousers *;query_pants;;comfort 
+* looking * jeans *;query_pants;;strechable
+* want * pants *;query_pants;;work
+* want * trousers *;query_pants;;office
+* want * jeans *;query_pants;;formal
+* need * pants *;query_pants;;fabulous
+* need * trousers *;query_pants;;front pockets
+* need * jeans *;query_pants;;V-Neck
+* skirts *;query_skirts;;stripes
+* skirt *;query_skirts;;everyday
+I am looking for skirts;query_skirts;;vintage
+I need skirts;query_skirts;;loose
+What sort of skirts do you have?;query_skirts;;young
+what * skirts *;query_skirts;;stonewashed
+classic;timeless;;sportsman
+retro;timeless;;little
+;timeless;;princess
+;timeless;;she
+;timeless;;he 
+;timeless;;her 
+;timeless;;his 
+;timeless;;boots
+;timeless;;sneakers
+;timeless;;cardigan
+;;;blazer
+;;;fedora
+;;;kidswear
+;;;slippers
+;;;stilettos
+;;;velour
+;;;elastane
+;;;nylon
+;;;khaki
+;;;sumer
+;;;winter
+;;;cold
+;;;sun
+;;;wind
+;;;sunshine
+;;;warm
+;;;breathable
