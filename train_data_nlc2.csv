@@ -1,49 +1,134 @@
-I am a girl;user_gender;;
-I am girl;user_gender;;
-girl;user_gender;;
-I am a boy;user_gender;;
-I am boy;user_gender;;
-boy;user_gender;;
-I am a man;user_gender;;
-man;user_gender;;
-I am a male;user_gender;;
-male;user_gender;;
-I am a woman;user_gender;;
-woman;user_gender;;
-I am a woman;user_gender;;
-woman;user_gender;;
-I am a female;user_gender;;
-female;user_gender;;
-I am 26 years old;user_age;;
-I am 26;user_age;;
-I am 26;user_age;;
-26;user_age;;
-36;user_age;;
-I am 89;user_age;;
-45;user_age;;
-89;user_age;;
-56;user_age;;
-75;user_age;;
-I am 12;user_age;;
-26;user_age;;
-42;user_age;;
-57;user_age;;
-86;user_age;;
-32;user_age;;
-34;user_age;;
-I want cloths;query_cloth;;
-I am looking for cloths;query_cloth;;
-I want * cloths;query_cloth;;
-I am in search of cloths;query_cloth;;
-I need cloths;query_cloth;;
-cloths;query_cloth;;
-cloth;query_cloth;;
-textile;query_cloth;;
-fabric;query_cloth;;
-what * cloths do you have?;query_cloth;;
-What types of cloths *;query_cloth;;
-what sort of cloths do you have?;query_cloth;;
-what * cloths *;query_cloth;;
-I am a 26 years old man looking for cloths;query_cloth;user_gender;user_age
-I am a girl and want cloths;query_cloth;user_gender;
-I am a man and want some jackets;query_cloth;;
+I am a girl;user_gender
+I am girl;user_gender
+girl;user_gender
+I am a boy;user_gender
+I am boy;user_gender
+boy;user_gender
+I am a man;user_gender
+man;user_gender
+I am a male;user_gender
+male;user_gender
+I am a woman;user_gender
+woman;user_gender
+I am a woman;user_gender
+woman;user_gender
+I am a female;user_gender
+female;user_gender
+I am 26 years old;user_age
+I am 26;user_age
+I am 26;user_age
+26;user_age
+36;user_age
+I am 89;user_age
+45;user_age
+89;user_age
+56;user_age
+75;user_age
+I am 12;user_age
+26;user_age
+42;user_age
+57;user_age
+86;user_age
+32;user_age
+34;user_age
+I want cloths;query_cloth
+I am looking for cloths;query_cloth
+I want * cloths;query_cloth
+I am in search of cloths;query_cloth
+I need cloths;query_cloth
+cloths;query_cloth
+cloth;query_cloth
+textile;query_cloth
+fabric;query_cloth
+what * cloths do you have?;query_cloth
+What types of cloths *;query_cloth
+what sort of cloths do you have?;query_cloth
+what * cloths *;query_cloth
+* cheap * ;price_low
+I want cheap *;price_low
+I am looking cheap *;price_low
+I need cheap *;price_low
+I dont want too costly;price_low
+* dont * costly *;price_low
+* dont * expensive *;price_low
+* no * expensive *;price_low
+* no* costly *;price_low
+* less than 40 *;price_low
+* 40 dollar *;price_low
+* 40 usd *;price_low
+* USD 40 *;price_low
+* below 40 *;price_low
+* under 40 *;price_low
+* below 10*;price_low
+* below 10*;price_low
+* below 20*;price_low
+* below 30*;price_low
+* below 35*;price_low
+* about 10 *;price_low
+* about 20 *;price_low
+* about 30 *;price_low
+* about 40 *;price_low
+* about 36 *;price_low
+* medium * ;price_medium
+* medium range *;price_medium
+I am looking cheap to medium *;price_medium
+* cheap * medium *;price_medium
+* less than 100 *;price_medium
+* 100 dollar *;price_medium
+* 100 usd *;price_medium
+* USD 100 *;price_medium
+* below 100 *;price_medium
+* under 100 *;price_medium
+* below 90*;price_medium
+* below 80*;price_medium
+* below 70*;price_medium
+* below 60*;price_medium
+* below 55*;price_medium
+* about 50 *;price_medium
+* about 45 *;price_medium
+* costly * ;price_high
+I want costly *;price_high
+I am looking cheap *;price_high
+I need cheap *;price_high
+I dont want too costly;price_high
+* costly *;price_high
+* expensive *;price_high
+* not * cheap *;price_high
+* no * cheap *;price_high
+* 200 usd *;price_high
+* USD 300 *;price_high
+* above 100 *;price_high
+* higher * 100 *;price_high
+I want shoes;query_shoes
+I am looking for shoes;query_shoes
+I want * shoes;query_shoes
+I am in search of shoes;query_shoes
+I need shoes;query_shoes
+* shoes *;query_shoes
+shoes;query_shoes
+boots;query_shoes
+sandle;query_shoes
+what * shoes do you have?;query_shoes
+What types of shoes *;query_shoes
+what sort of shoes do you have?;query_shoes
+what * shoes *;query_shoes
+I want pants;query_pants
+* pants *;query_pants
+* trousers *;query_pants
+* jeans *;query_pants
+I am looking for jeans;query_pants
+* looking * pants *;query_pants
+* looking * trousers *;query_pants
+* looking * jeans *;query_pants
+* want * pants *;query_pants
+* want * trousers *;query_pants
+* want * jeans *;query_pants
+* need * pants *;query_pants
+* need * trousers *;query_pants
+* need * jeans *;query_pants
+* skirts *;query_skirts
+* skirt *;query_skirts
+I am looking for skirts;query_skirts
+I need skirts;query_skirts
+What sort of skirts do you have?;query_skirts
+what * skirts *;query_skirts

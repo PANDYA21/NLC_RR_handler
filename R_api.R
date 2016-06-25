@@ -135,11 +135,36 @@ readLines("22272.chat")
 ## invalid question
 ress <- POST("http://10.0.50.252:1234/custom/summarize", encode = "multipart", 
              body = '{"user_pass":"nlc_rr_handler:hackathon@2016", 
-             "query":"i play ", 
-             "conv_id":"start"}', content_type("application/json"))
+             "query":"this is bullshit", 
+             "conv_id":"48750"}', content_type("application/json"))
 ress
-# fromJSON(content(ress, "text"))
-ress$all_headers
+fromJSON(content(ress, "text"))
+# ress$all_headers
+ress <- POST("http://10.0.50.252:1234/custom/summarize", encode = "multipart", 
+             body = '{"user_pass":"nlc_rr_handler:hackathon@2016", 
+             "query":"male", 
+             "conv_id":"48750"}', content_type("application/json"))
+fromJSON(content(ress, "text"))
+ress <- POST("http://10.0.50.252:1234/custom/summarize", encode = "multipart", 
+             body = '{"user_pass":"nlc_rr_handler:hackathon@2016", 
+             "query":"this is pretty bullshit", 
+             "conv_id":"48750"}', content_type("application/json"))
+fromJSON(content(ress, "text"))
+ress <- POST("http://10.0.50.252:1234/custom/summarize", encode = "multipart", 
+             body = '{"user_pass":"nlc_rr_handler:hackathon@2016", 
+             "query":"i am 26", 
+             "conv_id":"48750"}', content_type("application/json"))
+fromJSON(content(ress, "text"))
+ress <- POST("http://10.0.50.252:1234/custom/summarize", encode = "multipart", 
+             body = '{"user_pass":"nlc_rr_handler:hackathon@2016", 
+             "query":"this is pretty bullshit", 
+             "conv_id":"48750"}', content_type("application/json"))
+fromJSON(content(ress, "text"))
+ress <- POST("http://10.0.50.252:1234/custom/summarize", encode = "multipart", 
+             body = '{"user_pass":"nlc_rr_handler:hackathon@2016", 
+             "query":"cloths", 
+             "conv_id":"48750"}', content_type("application/json"))
+fromJSON(content(ress, "text"))
 
 ## invalid question
 ress <- POST("http://nlc-rr-handler.eu-gb.mybluemix.net/custom/summarize", encode = "multipart", 
@@ -167,7 +192,7 @@ cat(content(ressb, "text"))
 ressb <- POST("https://nlc-rr-handler.eu-gb.mybluemix.net/custom/summarize", encode = "multipart", 
               body = upload_file("samplerequest.json"), 
               content_type("Application/json"))
-ressb$headers
+# ressb$headers
 ressb$all_headers
 # ressb$request
 cat(content(ressb, "text"))

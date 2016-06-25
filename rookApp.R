@@ -19,13 +19,15 @@
 uname.api <- "nlc_rr_handler"
 pswd.api <- "hackathon@2016"
 user_pass.api <- paste0(uname.api, ":", pswd.api, collapse = "")
+source("udfs.R")
 
 rookApp <- function(env) {
   req <- Request$new(env)
   res <- Response$new(headers=list("Content-Type"="application/json" ,
                                    "Access-Control-Allow-Origin"="*", # "http://nlc-rr-handler.eu-gb.mybluemix.net/", #"*",
                                    "access-control-allow-credentials"="TRUE",
-                                   "Allow"="GET, POST, HEAD"
+                                   "Access-Control-Allow-Methods"="GET, POST, HEAD, PUT",
+                                   "Access-Control-Allow-Headers"="X-Requested-With, Content-Type"
                                    ))
   # res <- Response$new()
   if(req$post()){
@@ -50,29 +52,22 @@ rookApp <- function(env) {
         # send the user input to NLC
         nlc.res <- watson.nlc.processtextreturnclass(classifier, as.character(post$query))
         class.ans <- nlc.res$class[nlc.res$confidence > 0.75]
+        # if NLC couldnt understand...
+        if(length(class.ans) == 0){
+          didnotget.txt <- "Could not understand that... "
+        } else {
+          didnotget.txt <- character(0)
+        }
         
         # save chat history for this conversation
         chatt <- paste0(as.character(post$query), ":", class.ans)
         writeLines(text = chatt, 
                    con = paste0(as.character(post.ans$conv_id), ".chat"))
         
-        # post.ans$next_question <- class.ans # "next question will go here ..."
-        # look for existing data and send next question
-        asked <- unlist(lapply(strsplit(chatt, ":"), function(x) x[2]))
-        if(length(asked) < 3){
-          
-          # ask the remaining questions
-          all.classes <- c("user_gender", "user_age", "query_cloth")
-          rem.classes <- all.classes[!(all.classes %in% asked)]
-          rem.classes <- rem.classes[1]
-          switch (rem.classes,
-                  "user_gender" = {next.que <- "What is your gender?"},
-                  "user_age" = {next.que <- "What is your age?"},
-                  "query_cloth" = {next.que <- "What are you looking for?"})
-        }
-        post.ans$next_question <- next.que # next question will go here ...
+        # # look for existing data and send next question
+        post.ans$next_question <- paste0(didnotget.txt, getNextQue(chatt))
         
-        # send request to rr
+        # send request to rr (in fact, dont, since first question)
         post.ans$rr_data <- "NULL"
         
       } else {
@@ -95,33 +90,31 @@ rookApp <- function(env) {
         # send the user input to NLC
         nlc.res <- watson.nlc.processtextreturnclass(classifier, as.character(post$query))
         class.ans <- nlc.res$class[nlc.res$confidence > 0.75]
+        # if NLC couldnt understand...
+        if(length(class.ans) == 0){
+          didnotget.txt <- "Could not understand that... "
+        } else {
+          didnotget.txt <- character(0)
+        }
         
         # save chat history for this conversation
         chatt <- c(chatt, paste0(as.character(post$query), ":", class.ans))
         writeLines(text = chatt, con = paste0(as.character(post$conv_id), ".chat"))
         
-        # look for existing data and send next question
-        asked <- unlist(lapply(strsplit(chatt, ":"), function(x) x[2]))
-        if(length(asked) < 3){
-          
-          # ask the remaining questions
-          all.classes <- c("user_gender", "user_age", "query_cloth")
-          rem.classes <- all.classes[!(all.classes %in% asked)]
-          
-          if(length(rem.classes) != 0){
-            rem.classes <- rem.classes[1]
-            switch (rem.classes,
-                    "user_gender" = {next.que <- "What is your gender?"},
-                    "user_age" = {next.que <- "What is your age?"},
-                    "query_cloth" = {next.que <- "What are you looking for?"})
-          } 
-        } else {
-          next.que <- "Out of questions now... will send the query to RR..."
-        }
-        post.ans$next_question <- next.que # next question will go here ...
+        # # look for existing data and send next question
+        post.ans$next_question <- paste0(didnotget.txt, getNextQue(chatt))
         
-        # send request to rr
-        post.ans$rr_data <- "NULL"
+        # send request to rr (send after three accepted answers)
+        asked <- unlist(lapply(strsplit(chatt, ":"), function(x) x[2]))
+        answers <- chatt[!is.na(asked)]
+        answers <- unlist(lapply(strsplit(answers, ":"), function(x) x[1]))
+        
+        if(length(answers) >= 3){
+          query_to_rr <- paste(answers, collapse = "_")
+          # query_to_rr <- gsub("\ ", "%20", query_to_rr) # the proper solution after 'shortDescription' is solved
+          query_to_rr <- gsub("\ ", ".", query_to_rr)
+          post.ans$rr_data <- getRRresp(query_to_rr)
+        }
       }
     } else {
       
