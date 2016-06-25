@@ -31,7 +31,7 @@ if (status == 0) {
   #
   s$add(name = "summarize", 
         app = rookApp)
-  s$handler(appName = "summarize")
+  # s$handler(appName = "summarize")
   
   s$print()
   

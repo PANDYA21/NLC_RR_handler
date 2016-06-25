@@ -22,21 +22,24 @@ user_pass.api <- paste0(uname.api, ":", pswd.api, collapse = "")
 
 rookApp <- function(env) {
   req <- Request$new(env)
-  # res <- Response$new(headers=list("Content-Type"="application/json" , 
-  #                                  "Access-Control-Allow-Origin"="*", # "http://nlc-rr-handler.eu-gb.mybluemix.net/", #"*",
-  #                                  "access-control-allow-credentials"="TRUE"))
-  res <- Response$new()
+  res <- Response$new(headers=list("Content-Type"="application/json" ,
+                                   "Access-Control-Allow-Origin"="*", # "http://nlc-rr-handler.eu-gb.mybluemix.net/", #"*",
+                                   "access-control-allow-credentials"="TRUE",
+                                   "Allow"="GET, POST, HEAD"
+                                   ))
+  # res <- Response$new()
   if(req$post()){
     
     post <- req$POST() # the input from user
     post <- names(post)
+    # cat(post)
     post <- fromJSON(post)
     
     if(post$user_pass == user_pass.api){
       
       # authentication successful
       # if conv_id is null start a new chat
-      if(post$conv_id == "NULL"){
+      if(tolower(post$conv_id) == "start" | tolower(post$conv_id) == "null" ){
         
         # start a new chat
         chat_id <- sample(c(10000:50000), 1)
