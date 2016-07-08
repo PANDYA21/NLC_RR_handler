@@ -74,8 +74,11 @@ getNextQue <- function(chatt) {
 
 ## send a query to RR and get catentry.ids in response
 getRRresp <- function(query_to_rr){
-  uname_rr <- "8c676d2c-38a7-4604-b4a3-3849f51e84a6 : Ph4ZKUhXxsAo"
-  ranker_id <- "3b140ax15-rank-3562"
+  # uname_rr <- "8c676d2c-38a7-4604-b4a3-3849f51e84a6 : Ph4ZKUhXxsAo"
+  # ranker_id <- "3b140ax15-rank-3562"
+  # get username, password and ranker id from the external file
+  source("ranker_cred.txt", local = F)
+  
   # example query url
   # url_rr <- "https://gateway.watsonplatform.net/retrieve-and-rank/api/v1/solr_clusters/scb7c0999c_d827_4d15_b305_2ddbf02fcd44/solr/example_collection/select?q=shortDescription:male_jackets_black_leather&wt=json"
   query_url_rr <- paste0("https://gateway.watsonplatform.net/retrieve-and-rank/api/v1/solr_clusters/scb7c0999c_d827_4d15_b305_2ddbf02fcd44/solr/example_collection/select?q=", query_to_rr, "&wt=json")

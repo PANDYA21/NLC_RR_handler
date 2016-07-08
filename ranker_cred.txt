@@ -1,0 +1,2 @@
+uname_rr <- "8c676d2c-38a7-4604-b4a3-3849f51e84a6 : Ph4ZKUhXxsAo" # username : password
+ranker_id <- "3b140ax15-rank-3562" # ranker_id

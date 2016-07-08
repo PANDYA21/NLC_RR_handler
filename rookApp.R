@@ -123,6 +123,7 @@ rookApp <- function(env) {
           # query_to_rr <- paste(answers, collapse = "%20")
           query_to_rr <- gsub("\ ", "%20", query_to_rr) # the proper solution after 'shortDescription' is solved
           # query_to_rr <- gsub("\ ", "_", query_to_rr)
+          print(query_to_rr)
           post.ans$rr_data <- getRRresp(query_to_rr)
         } else {
           post.ans$rr_data <- "NULL"

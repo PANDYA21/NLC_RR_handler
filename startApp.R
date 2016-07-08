@@ -59,7 +59,7 @@ if (Sys.getenv('VCAP_APP_PORT') == "") {
     s$add(name = "summarize", 
           app = rookApp)
     s$print()
-    Sys.sleep(24*7*3600)
+    Sys.sleep(24*7*2*3600)
     
     sink(stderr())
     write("prints to stderr", stderr())

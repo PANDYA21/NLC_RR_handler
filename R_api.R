@@ -182,14 +182,27 @@ fromJSON(content(ress, "text"))
 
 
 # actual JSON passing
-## invalid question
+## response to first question
 ressb <- POST("https://nlc-rr-handler.eu-gb.mybluemix.net/custom/summarize", encode = "multipart", 
-             body = toJSON(list(user_pass="nlc_rr_handler:hackathon@2016", query="I am male", conv_id="start")), 
+             body = toJSON(list(user_pass="nlc_rr_handler:hackathon@2016", query="I am looking for jackets", conv_id="start")), 
              content_type("Application/json"))
-ressb$headers
-ressb$all_headers
+# ressb$headers
+# ressb$all_headers
 # ressb$request
-cat(content(ressb, "text"))
+# cat(content(ressb, "text"))
+fromJSON(content(ressb, "text"))
+conv.id <- fromJSON(content(ressb, "text"))$conv_id
+## continue the conversation with the conv.id
+## what is your gender?
+ressb <- POST("https://nlc-rr-handler.eu-gb.mybluemix.net/custom/summarize", encode = "multipart", 
+              body = toJSON(list(user_pass="nlc_rr_handler:hackathon@2016", query="I am a man", conv_id=conv.id)), 
+              content_type("Application/json"))
+fromJSON(content(ressb, "text"))
+## what is your age?
+ressb <- POST("https://nlc-rr-handler.eu-gb.mybluemix.net/custom/summarize", encode = "multipart", 
+              body = toJSON(list(user_pass="nlc_rr_handler:hackathon@2016", query="I am looking 26", conv_id=conv.id)), 
+              content_type("Application/json"))
+fromJSON(content(ressb, "text"))
 
 
 
@@ -207,28 +220,33 @@ fromJSON(content(ressb, "text"))
 ## local conversation
 ress <- POST("http://10.0.50.252:1234/custom/summarize", encode = "multipart", 
              body = '{"user_pass":"nlc_rr_handler:hackathon@2016", 
-             "query":"jacket girl", 
-             "conv_id":"39720"}', content_type("application/json"))
+             "query":"jacket", 
+             "conv_id":"start"}', content_type("application/json"))
+fromJSON(content(ress, "text"))
+conv.id <- fromJSON(content(ress, "text"))$conv_id
+ress <- POST("http://10.0.50.252:1234/custom/summarize", encode = "multipart", 
+             body = toJSON(list(user_pass="nlc_rr_handler:hackathon@2016",
+                                query="I am a woman", 
+                                conv_id=conv.id)), 
+             content_type("application/json"))
 fromJSON(content(ress, "text"))
 ress <- POST("http://10.0.50.252:1234/custom/summarize", encode = "multipart", 
-             body = '{"user_pass":"nlc_rr_handler:hackathon@2016", 
-             "query":"female", 
-             "conv_id":"39720"}', content_type("application/json"))
+             body = toJSON(list(user_pass="nlc_rr_handler:hackathon@2016",
+                                query="I am 26 years old", 
+                                conv_id=conv.id)), 
+             content_type("application/json"))
 fromJSON(content(ress, "text"))
 ress <- POST("http://10.0.50.252:1234/custom/summarize", encode = "multipart", 
-             body = '{"user_pass":"nlc_rr_handler:hackathon@2016", 
-             "query":"i am 26 years old", 
-             "conv_id":"39720"}', content_type("application/json"))
+             body = toJSON(list(user_pass="nlc_rr_handler:hackathon@2016",
+                                query="leather", 
+                                conv_id=conv.id)), 
+             content_type("application/json"))
 fromJSON(content(ress, "text"))
 ress <- POST("http://10.0.50.252:1234/custom/summarize", encode = "multipart", 
-             body = '{"user_pass":"nlc_rr_handler:hackathon@2016", 
-             "query":"leather", 
-             "conv_id":"39720"}', content_type("application/json"))
-fromJSON(content(ress, "text"))
-ress <- POST("http://10.0.50.252:1234/custom/summarize", encode = "multipart", 
-             body = '{"user_pass":"nlc_rr_handler:hackathon@2016", 
-             "query":"leather", 
-             "conv_id":"39720"}', content_type("application/json"))
+             body = toJSON(list(user_pass="nlc_rr_handler:hackathon@2016",
+                                query="black", 
+                                conv_id=conv.id)), 
+             content_type("application/json"))
 fromJSON(content(ress, "text"))
 
 
