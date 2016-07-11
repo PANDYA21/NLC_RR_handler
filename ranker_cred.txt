@@ -1,2 +1,2 @@
-uname_rr <- "8c676d2c-38a7-4604-b4a3-3849f51e84a6 : Ph4ZKUhXxsAo" # username : password
-ranker_id <- "3b140ax15-rank-3562" # ranker_id
+uname_rr <- "a03c2083-8ddc-400f-96e8-31cd4ba8e749 : VmdWUNBh6uYg" # "8c676d2c-38a7-4604-b4a3-3849f51e84a6 : Ph4ZKUhXxsAo" # username : password
+ranker_id <- "3b140ax14-rank-10049 # "3b140ax15-rank-3562" # ranker_id
